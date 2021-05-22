@@ -1,0 +1,8 @@
+# vim: ft=zsh
+
+# Bash completion
+autoload -U +X bashcompinit && bashcompinit
+autoload -U +X compinit && compinit
+
+# Colorful prompt with Git and Subversion branch
+autoload -U colors && colors

@@ -1,0 +1,44 @@
+# vim: ft=zsh
+
+# Clear
+clear() {
+    /usr/bin/clear
+
+    if [ `command -v welcome` ]; then
+        welcome;
+    fi
+}
+
+# Local IP
+localip() {
+    ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}'
+}
+
+# Better tree lists
+tt() {
+    tree -I '.git|.node_modules|.DS_Store' --dirsfirst --filelimit 15 -L ${1:-3} -aC $2
+}
+
+# fkill - kill process
+fkill() {
+    local pid
+    pid=$(ps -ef | sed 1d | fzf -m | awk '{print $2}')
+
+    if [ "x$pid" != "x" ]
+    then
+        echo $pid | xargs kill -${1:-9}
+    fi
+}
+
+# Mac OS Dock Helper
+dock-add-spacer() {
+    if [ `command -v defaults` ]; then
+        defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-type="spacer-tile";}'
+        killall Dock
+    fi
+}
+
+# no f*ck given
+if [ `command -v thefuck` ]; then
+    eval $(thefuck --alias)
+fi

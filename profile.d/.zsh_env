@@ -1,0 +1,2 @@
+# more macOS/Bash-like word jumps
+export WORDCHARS=""

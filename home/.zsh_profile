@@ -1,0 +1,21 @@
+export DOTFILES_HOME="$HOME/dotfiles"
+
+# Language
+export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+export EDITOR='nano'
+export EDITOR_UI='code'
+
+# Prompt Components
+prompt_context() {}
+
+# Parsing all zsh .dotfiles
+if [ -d "$DOTFILES_HOME" ]; then
+    test -e "$DOTFILES_HOME/profile.d/.zsh_antigen"     && source "$DOTFILES_HOME/profile.d/.zsh_antigen"
+    test -e "$DOTFILES_HOME/profile.d/.zsh_plugins"     && source "$DOTFILES_HOME/profile.d/.zsh_plugins"
+    test -e "$DOTFILES_HOME/profile.d/.zsh_env"         && source "$DOTFILES_HOME/profile.d/.zsh_env"
+    test -e "$DOTFILES_HOME/profile.d/.zsh_completion"  && source "$DOTFILES_HOME/profile.d/.zsh_completion"
+    test -e "$DOTFILES_HOME/profile.d/.zsh_functions"   && source "$DOTFILES_HOME/profile.d/.zsh_functions"
+    test -e "$DOTFILES_HOME/profile.d/.zsh_aliases"     && source "$DOTFILES_HOME/profile.d/.zsh_aliases"
+fi

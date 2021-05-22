@@ -1,0 +1,40 @@
+# vim: ft=zsh
+
+# ZSH
+alias zshconfig="$GUI_EDITOR ~/.zshrc"
+alias ohmyzsh="$GUI_EDITOR ~/.oh-my-zsh"
+alias zshreload="source ~/.zshrc"
+
+# Aliases
+alias back='if [ -n "$OLDPWD" ]; then cd "$OLDPWD"; fi'
+alias .2='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+alias .6='cd ../../../../../..'
+
+# fs
+alias ls='ls -GpF'
+alias ll='ls -alGpF'
+alias lh="ll -h" # human readable file sizes
+alias lx="exa --long --all --git"
+alias path='echo -e ${PATH//:/\\n}'
+alias gpg="gpg2"
+alias help='tldr'
+alias ping='prettyping --nolegend'
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+
+# No f*fk given
+alias f='fuck'
+alias fk='fuck'
+alias tf='fuck'
+alias wtf='fuck'
+alias shit='fuck'
+
+# Quick-edit configs
+alias hosts="sudo nano /etc/hosts"
+alias php.ini="$EDITOR $(php --ini | grep Loaded | grep php.ini | awk '{print $4}')"
+
+# System tools aliases
+alias ssh-rm="ssh-keygen -R"
+alias known-hosts="cat ~/.ssh/known_hosts | awk '{print \$1}'"
