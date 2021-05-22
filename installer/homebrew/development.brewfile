@@ -1,5 +1,8 @@
 tap "hashicorp/tap"
 
+# AWS
+brew "awscli"
+
 # Ditital Ocean
 brew "doctl"
 
