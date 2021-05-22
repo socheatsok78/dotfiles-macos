@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -e
+
+git-unstage () {
+    git reset "$@"
+}
+
+git-unstage "$@"

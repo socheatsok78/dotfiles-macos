@@ -1,0 +1,4 @@
+#!/bin/sh
+# https://github.com/terkelg/dotfiles/blob/master/etc/.bin/week
+
+date +%V

@@ -1,0 +1,18 @@
+#!/bin/sh
+
+#/
+#/ Usage: powertop
+#/
+#/ Activate power top mode
+#/
+
+test "$1" = "--help" && {
+    grep ^#/ <"$0"| cut -c4-
+    exit 2
+}
+
+powertop() {
+  top -stats pid,command,power -o power
+}
+
+powertop "$@"

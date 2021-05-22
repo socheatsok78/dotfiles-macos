@@ -1,0 +1,40 @@
+#!/bin/sh
+
+# https://github.com/terkelg/dotfiles/blob/master/etc/.bin/portkill
+
+#/ Usage: dock [port]
+#/ Kill any running process that using [port]
+
+test "$1" = "--help" && {
+    grep ^#/ <"$0"| cut -c4-
+    exit 2
+}
+
+function dock_divide_apps () {
+    if [ `command -v defaults` ]; then
+        defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
+        killall Dock
+    fi
+}
+
+function dock_divide_others () {
+    if [ `command -v defaults` ]; then
+        defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-type="spacer-tile";}'
+        killall Dock
+    fi
+}
+
+
+function main () {
+    local command=$1
+
+    if [ "$command" = "apps" ]; then
+        dock_divide_apps
+    elif [ "$command" = "others" ]; then
+        dock_divide_others
+    else
+        dock --help
+    fi
+}
+
+main "$@"

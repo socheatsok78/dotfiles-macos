@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# https://github.com/terkelg/dotfiles/blob/master/etc/.bin/portkill
+
+#/ Usage: portkill [port]
+#/ Kill any running process that using [port]
+
+test "$1" = "--help" && {
+    grep ^#/ <"$0"| cut -c4-
+    exit 2
+}
+
+port=${1-"8080"}
+shift
+
+pid="$(ports | grep "$port" | awk '{ print $2 }')"
+if [ -n "$pid" ]; then
+    kill "$pid" "$@"
+else
+    echo "PORT: $port is available!"
+fi
