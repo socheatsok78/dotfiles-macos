@@ -1,0 +1,11 @@
+{
+    // =======================================================
+    // Files Associations & Language Base Settings
+    // =======================================================
+    "files.associations": {
+        ".zsh_*": "shellscript",
+        "install": "shellscript",
+        "Brewfile": "ruby",
+        "*.brewfile": "ruby"
+    },
+}
