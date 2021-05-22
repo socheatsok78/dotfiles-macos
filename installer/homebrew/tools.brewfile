@@ -1,0 +1,41 @@
+# Brewfile
+tap "github/gh"
+tap "facebook/fb"
+tap "heroku/brew"
+tap "dart-lang/dart"
+tap "hashicorp/tap"
+
+# Version Control
+brew "git"
+brew "gh"
+
+# Mac App Store command line interface
+brew "mas"
+
+# Development Environment
+brew "dart"                 # Dart
+brew "go"                   # Golang
+brew "node@14"              # NodeJS v14
+brew "deno"                 # Deno A secure runtime for JavaScript and TypeScript.
+brew "yarn"                 # NodeJS Package Manager
+brew "php@7.4"              # PHP v7.4
+brew "composer"             # PHP Package Manager
+brew "virtualenv"           # Python Virtual Env
+
+# CLI Tools
+brew "tldr"
+brew "htop"
+brew "bat"                  # "cat" on steroids
+brew "exa"                  # A modern replacement for ls
+brew "prettyping"
+brew "lolcat"
+brew "tree"                 # List directories in a tree structure
+brew "httpie"
+brew "thefuck"              # No fuck given
+brew "jq"                   # lightweight and flexible command-line JSON processor
+brew "watch"                # Execute a program periodically, showing output fullscreen
+
+# Download Tools
+brew "youtube-dl"           # Don't you dare remove this
+brew "whalebrew"            # Homebrew, but with Docker images
+brew "mackup"               # Mackup, Keep your application settings in sync.

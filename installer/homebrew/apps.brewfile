@@ -1,0 +1,31 @@
+# Apps
+cask "google-chrome"                # Google Chrome
+cask "google-drive"                 # Google Drive
+cask "chrome-remote-desktop-host"   # Chrome Remote Desktop Host
+cask "firefox"                      # Firefox
+cask "pocket-casts"                 # Pocket Casts
+cask "vlc"                          # VideoLan Media Player
+
+# Development tools
+cask "visual-studio-code"           # Code editing. Redefined.
+cask "fork"                         # Fast and friendly git client
+cask "alacritty"                    # A cross-platform, GPU-accelerated terminal emulator
+cask "iterm2"                       # iTerm2 is a replacement for Terminal
+cask "github"                       # GitHub Desktop
+cask "tableplus"                    # TablePlus
+cask "insomnia"                     # Insomnia + Designer
+cask "docker"                       # Docker
+cask "db-browser-for-sqlite"        # SQLite DB Browser
+cask "ngrok"                        # ngrok - secure introspectable tunnels to localhost
+
+# Security
+cask "gpg-suite"                    # GPG Suite
+
+# Utilities
+cask "pock"                         # Display macOS Dock in Touch Bar
+cask "mounty"                       # NTFS Helper
+cask "cheatsheet"                   # Know your short cuts
+cask "dozer"                        # Hide menu bar icons
+cask "stand"                        # Reminds you to stand up
+cask "eul"                          # macOS status monitoring app written in SwiftUI
+cask "transmission"                 # Torrent client

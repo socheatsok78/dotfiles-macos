@@ -1,0 +1,15 @@
+tap "hashicorp/tap"
+
+# Ditital Ocean
+brew "doctl"
+
+# Hashicorp
+cask "vagrant"
+brew "hashicorp/tap/waypoint"
+brew "hashicorp/tap/terraform"
+
+# Heroku
+brew "heroku"
+
+# Vercel
+brew "vercel-cli"

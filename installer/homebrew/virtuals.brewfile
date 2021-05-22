@@ -1,0 +1,2 @@
+cask "multipass"                    # Ubuntu VMs on demand for any workstation
+cask "virtualbox"                   # Oracle VirtualBox
